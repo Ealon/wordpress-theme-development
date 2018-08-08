@@ -37,7 +37,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="/">
       <span>EALON</span>
-      <img width="30" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/ealon.png" alt="ealon">
+      <img width="30" src="/wp-content/themes/ealon-wordpress-theme/assets/img/ealon.png" alt="ealon">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

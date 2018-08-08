@@ -2,7 +2,7 @@
 Theme Name: EalonWordPress
 Theme URI: http://underscores.me/
 Author: Ealon
-Author URI: http://underscores.me/
+Author URI: https://ealon.github.io/
 Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -331,4 +331,32 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+
+/* ==============  customized styles ================= */
+* {
+	font-family: Poppins, Lato, sans-serif;
+}
+.carousel-bg {
+	height: 400px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#navbarSupportedContent a {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+#navbarSupportedContent>ul>li>a::after {
+	content: '';
+	position: absolute;
+	height: 0;
+	border-bottom: #f1f1f1 1px solid;
+	left: 0;
+	bottom: -2px;
+	width: 4em;
+	z-index: 99;
 }

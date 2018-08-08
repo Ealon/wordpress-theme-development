@@ -2,6 +2,12 @@
 /**
  * Template Name: Home Page
  */
+
+// custom fields
+$slider_2_label    = get_post_meta(15, 'slider_2_label', true);
+$slider_2_description    = get_post_meta(15, 'slider_2_description', true);
+$slider_3_label    = get_post_meta(15, 'slider_3_label', true);
+$slider_3_description    = get_post_meta(15, 'slider_3_description', true);
 get_header();
 ?>
 
@@ -13,25 +19,31 @@ get_header();
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="<?php bloginfo('stylesheet_directory');?>/assets/img/26.jpg" alt="First slide">
-			<div class="carousel-caption d-none d-md-block">
-				<h5>First slide label</h5>
-				<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-			</div>
+      <div class="carousel-bg d-block w-100" style="position: relative; background-image: url('https://s3.amazonaws.com/StartupStockPhotos/uploads/13.jpg')"></div>
+      <div style="background: #00000070; z-index: 99; position: absolute; width: 100%; top:0; height: 400px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5><?php bloginfo('name');?></h5>
+          <p><?php bloginfo('description');?>, Show what I can do with WordPress</p>
+        </div>
+      </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="<?php bloginfo('stylesheet_directory');?>/assets/img/03.jpg" alt="Second slide">
-			<div class="carousel-caption d-none d-md-block">
-				<h5>2nd Slide Title</h5>
-				<p>This is the 2nd one</p>
-			</div>
+      <div class="carousel-bg d-block w-100" style="position: relative; background-image: url('<?php bloginfo('stylesheet_directory');?>/assets/img/29.jpg')"></div>
+      <div style="background: #00000030; z-index: 99; position: absolute; width: 100%; top:0; height: 400px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5><?php echo $slider_2_label?></h5>
+          <p><?php echo $slider_2_description?></p>
+        </div>
+      </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="<?php bloginfo('stylesheet_directory');?>/assets/img/29.jpg" alt="Third slide">
-			<div class="carousel-caption d-none d-md-block">
-				<h5>3rd Slide label</h5>
-				<p>Here comes the 3rd!</p>
-			</div>
+      <div class="carousel-bg d-block w-100" style="position: relative; background-image: url('<?php bloginfo('stylesheet_directory');?>/assets/img/26.jpg')"></div>
+      <div style="background: #00000040; z-index: 99; position: absolute; width: 100%; top:0; height: 400px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5><?php echo $slider_3_label?></h5>
+          <p><?php echo $slider_3_description?></p>
+        </div>
+      </div>
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

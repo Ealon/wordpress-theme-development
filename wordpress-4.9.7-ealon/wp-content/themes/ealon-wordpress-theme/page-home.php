@@ -13,21 +13,21 @@ get_header();
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="/wp-content/themes/ealon-wordpress-theme/assets/img/26.jpg" alt="First slide">
+      <img class="d-block w-100" src="<?php bloginfo('stylesheet_directory');?>/assets/img/26.jpg" alt="First slide">
 			<div class="carousel-caption d-none d-md-block">
 				<h5>First slide label</h5>
 				<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 			</div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="/wp-content/themes/ealon-wordpress-theme/assets/img/03.jpg" alt="Second slide">
+      <img class="d-block w-100" src="<?php bloginfo('stylesheet_directory');?>/assets/img/03.jpg" alt="Second slide">
 			<div class="carousel-caption d-none d-md-block">
 				<h5>2nd Slide Title</h5>
 				<p>This is the 2nd one</p>
 			</div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="/wp-content/themes/ealon-wordpress-theme/assets/img/29.jpg" alt="Third slide">
+      <img class="d-block w-100" src="<?php bloginfo('stylesheet_directory');?>/assets/img/29.jpg" alt="Third slide">
 			<div class="carousel-caption d-none d-md-block">
 				<h5>3rd Slide label</h5>
 				<p>Here comes the 3rd!</p>

@@ -4,10 +4,19 @@
  */
 
 // custom fields
-$slider_2_label    = get_post_meta(15, 'slider_2_label', true);
-$slider_2_description    = get_post_meta(15, 'slider_2_description', true);
-$slider_3_label    = get_post_meta(15, 'slider_3_label', true);
-$slider_3_description    = get_post_meta(15, 'slider_3_description', true);
+$custom_value    = get_post_meta(15, 'custom_value', true);
+
+// Advanced Custom Fields
+$slider_1_image       = get_field('slider_1_image'); // returns an array, due to settings
+
+$slider_2_image       = get_field('slider_2_image'); // returns an array, due to settings
+$slider_2_label       = get_field('slider_2_label'); 
+$slider_2_description = get_field('slider_2_description'); 
+
+$slider_3_image       = get_field('slider_3_image'); // returns an array
+$slider_3_label       = get_field('slider_3_label'); 
+$slider_3_description = get_field('slider_3_description'); 
+
 get_header();
 ?>
 
@@ -19,29 +28,37 @@ get_header();
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <div class="carousel-bg d-block w-100" style="position: relative; background-image: url('https://s3.amazonaws.com/StartupStockPhotos/uploads/13.jpg')"></div>
+      <!-- if user uploaded an image for the slider -->
+      <?php if(!empty($slider_1_image)) :?>
+        <div class="carousel-bg d-block w-100" style="position: relative; background-image: url('<?php echo $slider_1_image['url']; ?>')"></div>
+      <?php endif; ?>
       <div style="background: #00000070; z-index: 99; position: absolute; width: 100%; top:0; height: 400px">
         <div class="carousel-caption d-none d-md-block">
           <h5><?php bloginfo('name');?></h5>
           <p><?php bloginfo('description');?>, Show what I can do with WordPress</p>
+          <p>Here comes the custom value: <?php echo $custom_value; ?>.</p>
         </div>
       </div>
     </div>
     <div class="carousel-item">
-      <div class="carousel-bg d-block w-100" style="position: relative; background-image: url('<?php bloginfo('stylesheet_directory');?>/assets/img/29.jpg')"></div>
+      <?php if(!empty($slider_2_image)) :?>
+        <div class="carousel-bg d-block w-100" style="position: relative; background-image: url('<?php echo $slider_2_image['url']; ?>')"></div>
+      <?php endif; ?>
       <div style="background: #00000030; z-index: 99; position: absolute; width: 100%; top:0; height: 400px">
         <div class="carousel-caption d-none d-md-block">
-          <h5><?php echo $slider_2_label?></h5>
-          <p><?php echo $slider_2_description?></p>
+          <h5><?php echo $slider_2_label; ?></h5>
+          <p><?php echo $slider_2_description; ?></p>
         </div>
       </div>
     </div>
     <div class="carousel-item">
-      <div class="carousel-bg d-block w-100" style="position: relative; background-image: url('<?php bloginfo('stylesheet_directory');?>/assets/img/26.jpg')"></div>
+      <?php if(!empty($slider_3_image)) :?>
+        <div class="carousel-bg d-block w-100" style="position: relative; background-image: url('<?php echo $slider_3_image['url']; ?>')"></div>
+      <?php endif; ?>
       <div style="background: #00000040; z-index: 99; position: absolute; width: 100%; top:0; height: 400px">
         <div class="carousel-caption d-none d-md-block">
-          <h5><?php echo $slider_3_label?></h5>
-          <p><?php echo $slider_3_description?></p>
+          <h5><?php echo $slider_3_label; ?></h5>
+          <p><?php echo $slider_3_description; ?></p>
         </div>
       </div>
     </div>

@@ -394,21 +394,19 @@ form {
 }
 	
 #about { 
-	background: url(http://localhost/wp-content/uploads/2018/08/ssp-5.jpg) 50% 0 no-repeat;
+	background: url(http://localhost/wp-content/uploads/2018/08/ssp-9.jpg) 50% 0 no-repeat;
 	background-size: cover;
 	width: 100%;
 	min-height: 400px;
-  position: relative; 
   -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	display: flex;
+	align-items: center;
 }
 
 #about article { 
-  height: 258px; 
-	position: absolute; 
 	color: #fff;
 	font-size: 2em;
   text-align: center; 
-  top: 150px; 
   width: 100%; 
 }

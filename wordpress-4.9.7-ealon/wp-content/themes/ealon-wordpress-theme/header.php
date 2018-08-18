@@ -23,6 +23,7 @@
   <script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/jquery-3.3.1.slim.min.js"></script>
   <script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/bootstrap.min.js"></script>
   <script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/popper.min.js"></script>
+  <script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/parallax-scrolling.js"></script>
   <!-- js and css -->
 
   <?php wp_head(); ?>

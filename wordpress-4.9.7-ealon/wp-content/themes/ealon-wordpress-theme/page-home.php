@@ -83,14 +83,13 @@ get_header();
   </p>
 </div>
 
-<section id="home" data-type="background" data-speed="10" class="pages">     
-  <article>I am absolute positioned</article>
-</section>   
-     
-<section id="about" data-type="background" data-speed="10" class="pages">
+<section id="about" data-type="background" data-speed="5" class="pages">
   <article>Simple Parallax Scroll</article>
 </section>
 
+<section id="home" data-type="background" data-speed="3" class="pages">     
+  <article>I am absolute positioned</article>
+</section>   
 
 <form>
   <div class="form-row">
